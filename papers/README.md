@@ -74,7 +74,7 @@
 ```text
 A05：GNN embedding + GP
 → P04：部分贝叶斯神经网络
-→ A06：GNN + MC Dropout
+→ W03：MOF partial-charge GNN + MC Dropout
 → P09：多神经网络分歧 + MD/DFT
 ```
 

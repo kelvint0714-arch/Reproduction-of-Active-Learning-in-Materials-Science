@@ -38,7 +38,7 @@
 
 ## 代码与数据核验
 
-- **作者代码**：[keeeto/gp-net](https://github.com/keeeto/gp-net)
+- **作者代码**：[mdi-group/gp-net](https://github.com/mdi-group/gp-net)（旧地址 `keeeto/gp-net` 会重定向到此处）
 - **完整数据、保存模型和论文实验包**：[Zenodo 10.5281/zenodo.4922828](https://doi.org/10.5281/zenodo.4922828)
 - **Zenodo 内容**：Materials Project 形成能数据、已训练 MEGNet 模型、GP 预测、随机 / 熵采样 MAE 结果、潜在向量和绘图 notebook。
 - **核验状态（2026-07-29）**：Zenodo 明确给出重建论文实验的命令和代码仓库；实验包约 222 MB。代码依赖的是较旧的 TensorFlow / MEGNet 环境，不能假定在最新 Python 上直接运行。
