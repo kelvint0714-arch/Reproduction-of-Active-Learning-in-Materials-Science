@@ -8,6 +8,7 @@
 - 论文代码目录：[paper/active_learning_scripts](https://github.com/ziatdinovmax/NeuroBayes/tree/paper/active_learning_scripts)
 - 建议首先核对的论文 commit：`c56327998052ed05499c79a731bd108733a678c8`
 - 本仓库状态：`未开始`
+- 本仓库分类：`模型学习型主动学习`
 
 ## 这篇论文做了什么
 

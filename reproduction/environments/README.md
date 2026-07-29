@@ -6,16 +6,21 @@
 
 | 论文 | 环境名 |
 |---|---|
-| P01 | `al-p01-pvlab` |
-| P02 | `al-p02-nist` |
-| P03 | `al-p03-bgolearn` |
+| A01 | `al-a01-nist-structure-property` |
+| A02 | `al-a02-dags` |
+| A03 | `al-a03-benchmark-mat` |
+| A05 | `al-a05-gp-net` |
+| A08 | `al-a08-aiphad` |
 | P04 | `al-p04-neurobayes` |
 | P05 | `al-p05-dkl-stm` |
-| P06 | `al-p06-molpal` |
 | P07 | MATLAB/MEX 独立记录 |
-| P08 | `al-p08-camd` |
 | P09 | 按 DP-GEN 官方容器或环境 |
-| P10 | `al-p10-gpax` |
+| P01（BO） | `bo-p01-pvlab` |
+| P02（BO） | `bo-p02-nist` |
+| P03（BO） | `bo-p03-bgolearn` |
+| P06（分子 BO） | `bo-p06-molpal` |
+| P08（平台） | `platform-p08-camd` |
+| P10（BO） | `bo-p10-gpax` |
 
 固定环境时至少记录：
 
