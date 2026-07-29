@@ -6,6 +6,7 @@
 - 期刊：Computer Physics Communications 253, 107206 (2020)
 - 作者仓库：[deepmodeling/dpgen](https://github.com/deepmodeling/dpgen)
 - 本仓库状态：`未开始`
+- 本仓库分类：`并发学习（主动学习分支）`
 
 ## 这篇论文做了什么
 

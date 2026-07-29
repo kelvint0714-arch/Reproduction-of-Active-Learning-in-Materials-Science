@@ -6,6 +6,7 @@
 - 期刊：npj Computational Materials 10, 120 (2024)
 - 作者仓库：[jx-wang-s-group/PiNDiff-CVI](https://github.com/jx-wang-s-group/PiNDiff-CVI)
 - 本仓库状态：`未开始`
+- 本仓库分类：`支持论文／物理建模（非主动学习）`
 
 ## 为什么收入本仓库
 

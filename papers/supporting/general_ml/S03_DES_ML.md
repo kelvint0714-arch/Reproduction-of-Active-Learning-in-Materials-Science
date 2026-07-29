@@ -6,6 +6,7 @@
 - 期刊：Green Chemistry 26, 7857–7868 (2024)
 - 作者仓库：[wenbomu/ML-accelerate-deep-eutectic-solvent-discovery](https://github.com/wenbomu/ML-accelerate-deep-eutectic-solvent-discovery)
 - 本仓库状态：`已评估，暂不作为主动学习复现`
+- 本仓库分类：`支持论文／一般机器学习（非主动学习）`
 
 ## 这篇论文做了什么
 
