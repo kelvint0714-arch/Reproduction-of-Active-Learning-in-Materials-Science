@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Reproduction outputs
+outputs/
+artifacts/
+reproduction/runs/**/raw_outputs/
+*.log
+
+# Large or private data must not be committed by default
+data/raw/
+data/private/
