@@ -7,8 +7,9 @@
 阅读：
 
 1. [主动学习与贝叶斯优化的边界](../docs/04_主动学习与贝叶斯优化的边界.md)；
-2. [统一主动学习流程](../docs/02_统一主动学习流程.md)；
-3. [持续文献清单](../papers/LITERATURE_WATCH.md)。
+2. [查询策略与采集函数的数学结构](../docs/05_查询策略与采集函数数学结构.md)；
+3. [统一主动学习流程](../docs/02_统一主动学习流程.md)；
+4. [持续文献清单](../papers/LITERATURE_WATCH.md)。
 
 完成标准：
 
@@ -143,7 +144,10 @@
 1. P01 PV-Lab：GP/RF 与 BO 基准；
 2. P02 NIST Fe-Co-Ni：不同采集函数与材料先验；
 3. P03 Bgolearn：现代单/多目标工程框架；
-4. P10 Augmented GP：物理概率模型增强 BO。
+4. P10 Augmented GP：物理概率模型增强 BO；
+5. PS01 聚合物太阳能电池：NLP 数据、GP 采集和 contextual bandit；
+6. H01 锂结晶 HITL：专家约束、分类边界和真实实验闭环；
+7. L01 LLM-AL：最后评估外部 LLM/reranker 能否超过传统强基线。
 
 副线主要报告 best-so-far、regret、top-k 和成功率，不能与 AL 的测试误差曲线混为一张结论。
 

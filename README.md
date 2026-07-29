@@ -11,7 +11,7 @@
 | 主动学习（模型学习） | 用最少新标签学好整个结构—性质映射、相图或势能面 | 最大不确定性、QBC、代表性、多样性、core-set | MAE/RMSE、校准、达到目标误差所需标签数 |
 | 贝叶斯优化（目标优化） | 用最少实验找到最大、最小或满足目标的候选 | EI、PI、UCB/LCB、TS、EHVI | best-so-far、regret、top-k 命中、找到目标所需实验数 |
 
-两者可以共用 GP、RF、XGBoost、神经网络或 GNN，也可以出现在同一篇论文的不同阶段，但**优化目标和评价指标不能混写**。详细判据见 [主动学习与贝叶斯优化的边界](docs/04_主动学习与贝叶斯优化的边界.md)。
+两者可以共用 GP、RF、XGBoost、神经网络或 GNN，也可以出现在同一篇论文的不同阶段，但**优化目标和评价指标不能混写**。详细判据见 [主动学习与贝叶斯优化的边界](docs/04_主动学习与贝叶斯优化的边界.md)，公式与方向约定见 [查询策略与采集函数的数学结构](docs/05_查询策略与采集函数数学结构.md)。
 
 ## 算法在闭环中的位置
 
@@ -47,7 +47,7 @@ GNN、随机森林和神经网络本身通常不是主动学习算法。它们�
 │   │   ├── closed_loop/
 │   │   └── concurrent_learning/
 │   ├── bayesian_optimization/    # 以找最优候选为目标
-│   ├── related/                  # 分子 BO、闭环平台和混合应用
+│   ├── related/                  # 分子 BO、人在回路、目标导向 AL/BO 和混合应用
 │   ├── supporting/               # PINN 与普通监督学习
 │   └── LITERATURE_WATCH.md       # 持续检索、准入和待核验清单
 ├── reproduction/                 # 复现路线、状态和记录模板
@@ -66,7 +66,7 @@ GNN、随机森林和神经网络本身通常不是主动学习算法。它们�
 
 操作入口见 [START_HERE](reproduction/START_HERE.md)，完整路线见 [ROADMAP](reproduction/ROADMAP.md)。
 
-贝叶斯优化作为独立副线保留：PV-Lab、NIST Fe-Co-Ni、Bgolearn 等论文适合学习“怎样更快找到最优材料”，但不再作为主动学习基础论文。
+贝叶斯优化作为独立副线保留：PV-Lab、NIST Fe-Co-Ni、Bgolearn 等论文适合学习“怎样更快找到最优材料”，但不再作为主动学习基础论文。聚合物太阳能电池、锂结晶 HITL 和 LLM-AL 则作为目标导向 AL/BO 的应用与边界案例，安排在基础复现之后。
 
 ## 粘合剂怎样进入项目
 

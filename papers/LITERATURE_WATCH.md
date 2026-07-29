@@ -29,7 +29,7 @@
 | A02 | 2025 | [Density-aware active learning for materials discovery](https://doi.org/10.1039/D5CP02908B) | 用少量标签学习 MOF/COF 分离性质回归映射 | [代码](https://github.com/insane-group/Density_Aware_Greedy_Sampling)，Apache-2.0；合成数据可直接生成 | CPU 跑合成数据，比较 DAGS/iGS/QBC/RT/Random；**第一优先** |
 | W01 | 2025 | [Data efficiency of classification strategies for chemical and materials design](https://doi.org/10.1039/D4DD00298A) | 用更少标签学好材料/化学分类边界 | [代码与数据](https://github.com/webbtheosim/classification-suite)、[分析](https://github.com/webbtheosim/classification-analysis) | 选 1–3 个任务做 RF/NN × Random/Uncertainty；高优先 |
 | W02 | 2023 | [Exploiting redundancy in large materials datasets for efficient machine learning with less data](https://doi.org/10.1038/s41467-023-42992-y) | 构造更小但信息充分的材料训练集 | [代码](https://github.com/mathsphy/paper-data-redundancy)、[数据](https://zenodo.org/record/8200972) | 一个数据库×一个性质，比较 RF-U/XGB-U/QBC/Random；高优先 |
-| A03 | 2025 | [A comprehensive benchmark of active learning strategies with AutoML for small-sample regression in materials science](https://doi.org/10.1038/s41598-025-24613-4) | 在 9 个小样本材料数据集上比较 17 种 AL 策略 | [代码与实验数据](https://github.com/bjhtud/Benchmark-AL-Mat) | 先选一个数据集和 3 种策略，缩短 AutoML 时间预算；中优先 |
+| A03 | 2025 | [A comprehensive benchmark of active learning strategies with AutoML for small-sample regression in materials science](https://doi.org/10.1038/s41598-025-24613-4) | 在 9 个小样本材料数据集上比较 17 种 AL 策略 | [代码、结果与示例数据](https://github.com/bjhtud/Benchmark-AL-Mat)；其余数据按论文来源取得 | 先选一个数据集和 3 种策略，缩短 AutoML 时间预算；中优先 |
 | W03 | 2024 | [Active learning graph neural networks for partial charge prediction of metal-organic frameworks via dropout Monte Carlo](https://doi.org/10.1038/s41524-024-01277-8) | 用更少 DFT 标签学习 MOF 原子部分电荷 | [代码、模型和训练数据](https://github.com/tummfm/mof-al) | 先用预训练模型回放小数据；完整训练需处理旧 JAX 环境 |
 | A05 | 2021 | [Entropy-based active learning of graph neural network surrogate models for materials properties](https://doi.org/10.1063/5.0065694) | 用熵采样减少 GNN 材料性质模型所需标签 | [代码](https://github.com/mdi-group/gp-net)、[数据和模型](https://doi.org/10.5281/zenodo.4922828) | 先复现随机与 entropy 学习曲线；中优先 |
 | A06 | 2024 | [Informative Training Data for Efficient Property Prediction in Metal–Organic Frameworks by Active Learning](https://doi.org/10.1021/jacs.3c13687) | 用 RT-AL 构造 MOF 性质预测的代表性训练集 | [代码](https://github.com/AshnaJose/Regression-Tree-based-Active-Learning-for-MOFs)、[数据/Notebook](https://doi.org/10.5281/zenodo.10511345) | 原数据较大，先下采样或只选一个性质 |
@@ -47,16 +47,26 @@
 |---:|---|---|---|
 | 2019 | [Prediction and optimization of epoxy adhesive strength from a small dataset through active learning](related/adhesive_hybrid/AD01_Epoxy_Adhesive_2019.md) | `author-labeled AL / Greedy exploitation + BO` | 前半段从 32 个实验出发，每轮选择预测强度最高的 5 个候选，不是 uncertainty AL；后半段使用 EI 做 BO。可指导粘合剂数据结构和未来应用验证，但不能替代通用 AL 基准。 |
 
+## 已核验：目标导向 AL/BO 与人在回路案例
+
+这些论文提供了真实材料应用或新型推荐器，但主要目标不是降低整个候选空间的预测误差，因此不进入 `AL-core`。
+
+| ID | 年份 | 论文 | 正确分类 | 公开资源与复现建议 |
+|---|---:|---|---|---|
+| PS01 | 2024 | [Accelerating Materials Discovery for Polymer Solar Cells](related/goal_directed_al_bo/PS01_Polymer_Solar_Cells_2024.md) | NLP 数据构建＋目标导向 AL/BO/contextual bandit；实际只优化 PCE | [作者代码和数据](https://github.com/pranav-s/PolymerSolarCellsML)，MIT；基础 AL/BO 后优先复现 |
+| H01 | 2025 | [Human-AI synergy in adaptive active learning for continuous lithium carbonate crystallization optimization](related/goal_directed_al_bo/H01_Lithium_Crystallization_HITL_2025.md) | 可行域 AL＋多目标过程优化＋真实 HITL 闭环 | [作者仓库](https://github.com/shmouses/HITL_Adaptive_Active_Learning_Lithium)、[Zenodo](https://doi.org/10.5281/zenodo.17122531)；以固定归档和 notebook 为入口 |
+| L01 | 2026 | [Training-free active learning framework in materials science with large language models](related/goal_directed_al_bo/L01_LLM_AL_2026.md) | LLM 驱动的目标导向 AL / 离散池顺序优化 | [官方代码和数据](https://github.com/Toniaac/LLM-AL)；先回放保存轨迹，完整复现依赖 Claude/Cohere API |
+
 ## 2026 新论文观察区
 
 这些论文很新，先收集，待代码/数据和任务边界进一步核验后再决定是否建立正式复现卡。
 
 | 论文 | 初步判断 | 待核验 |
 |---|---|---|
-| [Training-free active learning framework in materials science with large language models](https://doi.org/10.1038/s41524-026-02136-4) | 在四个材料数据集上做少样本迭代推荐；结果偏“更快到达 top candidate”，可能靠近目标优化 | 正式排版版本、代码、完整数据、API/模型可替代性 |
 | [Active learning enables generation of molecules that advance the known Pareto front](https://doi.org/10.1038/s41524-025-01924-8) | 生成模型＋量化模拟闭环；主结果是推进 Pareto 前沿，属于 AL/多目标优化混合 | 代码/数据入口和可运行许可证 |
 | [Discovery Learning predicts battery cycle life from minimal experiments](https://doi.org/10.1038/s41586-025-09951-7) | AL＋物理引导＋零样本学习，目标是少量原型下预测新电池寿命 | 论文代码、工业数据开放范围、AL 消融 |
 | [RAFFLE: active learning accelerated interface structure prediction](https://doi.org/10.1038/s41524-025-01749-5) | 主动扩充界面结构/能量数据，可能进入结构搜索与势函数旁支 | 官方代码入口、标签 Oracle、全局学习与低能结构优化的边界 |
+| [Quantum-Inspired Active Learning for Accelerated Materials Discovery](https://doi.org/10.1109/NQComp68334.2026.11497667) | 正式 IEEE 会议论文；经典计算机上的 quantum-inspired 不确定性采样，不是量子硬件加速 | [仓库](https://github.com/arnavk23/Quantum-active-learning) 以合成/随机材料数据为主，数据对应、引用准确性和凭据卫生存在风险；仅观察，不作为基准 |
 
 ## 明确分到 BO 或其他类别
 
@@ -64,7 +74,7 @@
 |---|---|
 | PV-Lab Benchmarking | 明确比较材料贝叶斯优化，目标是更快找到全局最优 |
 | NIST Fe-Co-Ni Benchmark | 作者使用广义 AL 术语，但任务、regret 和采集策略主体属于 BO |
-| Bgolearn | 明确是单/多目标 Bayesian optimization 框架 |
+| Bgolearn | 明确是单/多目标 Bayesian optimization 框架；支持 GP、RF、SVM、MLP 等，不是纯 GP 工具 |
 | MolPAL | 主体是高通量分子候选池中的 top-k/高分子筛选，归入 molecular BO |
 | Active learning for accelerated design of layered materials | 正文用 Expected Improvement 寻找目标性质，归入 BO |
 | CAMD | 是自主 Agent/Experiment/Analyzer/Campaign 平台，不限定 AL 算法 |
@@ -86,7 +96,7 @@ A05 GP-Net → W03 MOF partial-charge GNN → P04 PBNN
 A08 AIPHAD → W04 ALEBREW / P09 DP-GEN → W05 FLARE → W06 SARA
 
 应用迁移
-通用 AL 基准 → 环氧粘合剂 AL 阶段 → 独立 BO 阶段
+通用 AL 基准 → PS01 聚合物组合筛选 → 环氧粘合剂 AL 阶段 → 独立 BO 阶段
 ```
 
 ## 每次持续检索的固定步骤
@@ -102,4 +112,5 @@ A08 AIPHAD → W04 ALEBREW / P09 DP-GEN → W05 FLARE → W06 SARA
 
 | 日期 | 变化 |
 |---|---|
+| 2026-07-29 | 核验用户补充清单：正式收录 PS01、H01、L01 三个目标导向/混合案例；量子项目因数据与引用风险只进观察区；补充查询策略数学说明。 |
 | 2026-07-29 | 首次严格区分 AL 与 BO；核验 15 篇模型学习型 AL、1 篇环氧 AL+BO 案例和 4 篇 2026 观察论文；将 PV-Lab 从 AL 主线移出。 |

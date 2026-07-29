@@ -14,7 +14,7 @@
 |---|---|---|---|---|
 | A01 | [NIST 微结构—性质映射](active_learning/literature/A01_NIST_Structure_Property_AL_2024.md) | 回归；全局模型学习 | 代码和预计算数据公开 | **第一组，普通电脑** |
 | A02 | [DAGS 密度感知 AL](active_learning/literature/A02_DAGS_Density_Aware_AL_2025.md) | MOF/COF 回归；代表性选样 | 代码公开，合成数据可直接生成 | **第一组，普通电脑** |
-| A03 | [Benchmark-AL-Mat](active_learning/literature/A03_Benchmark_AL_Mat_2025.md) | 9 个小样本材料回归基准 | 代码、数据、结果公开 | 缩小 AutoML 预算后做 |
+| A03 | [Benchmark-AL-Mat](active_learning/literature/A03_Benchmark_AL_Mat_2025.md) | 9 个小样本材料回归基准 | 代码/结果公开；完整数据按论文来源取得 | 缩小 AutoML 预算后做 |
 | A04 | [材料黑箱函数逼近](active_learning/literature/A04_Koizumi_BlackBox_Approximation_2024.md) | 检验 uncertainty AL 何时失效 | 算法依赖公开，论文专用数据/脚本不完整 | 重要方法边界，非首个忠实复现 |
 | A05 | [GNN 表征＋GP 熵采样](active_learning/literature/A05_Entropy_GNN_Surrogate_2021.md) | 晶体形成能全局预测 | 代码和 Zenodo 实验包公开 | 旧 TF/MEGNet 环境，先回放 embedding |
 | A06 | [MOF RT-AL](active_learning/literature/A06_MOF_RT_AL_2024.md) | 用代表性小训练集预测 MOF 性质 | 代码和 4.1 GB 数据公开 | 只选一个目标和描述符 |
@@ -48,6 +48,9 @@
 | P06 | [MolPAL](related/molecular_bo/P06_MolPAL.md) | 分子池批量 BO / top-k 筛选 | 学习 RF、FFN、MPNN 和大候选池工程 |
 | P08 | [CAMD](related/closed_loop_platforms/P08_CAMD.md) | 自主闭环平台 | 学习 Agent–Experiment–Analyzer–Campaign 架构 |
 | AD01 | [环氧粘合剂小数据闭环](related/adhesive_hybrid/AD01_Epoxy_Adhesive_2019.md) | 作者称 AL 的 Greedy exploitation＋后续 BO | 粘合剂数据结构和两阶段迁移案例 |
+| PS01 | [聚合物太阳能电池](related/goal_directed_al_bo/PS01_Polymer_Solar_Cells_2024.md) | NLP 数据＋目标导向 AL/BO/bandit | 组合材料数据与顺序选样，高价值应用复现 |
+| H01 | [锂盐连续结晶 HITL](related/goal_directed_al_bo/H01_Lithium_Crystallization_HITL_2025.md) | 人在回路 AL＋多目标过程优化 | 学习专家审核和真实实验闭环 |
+| L01 | [LLM-AL](related/goal_directed_al_bo/L01_LLM_AL_2026.md) | LLM 驱动的离散池目标优化 | 前沿高级案例，完整复现依赖商业 API |
 
 ## 支持论文
 
@@ -85,6 +88,8 @@ A05：GNN embedding + GP
 ### 想寻找最高性能材料
 
 转到 BO 副线，从 P01 开始。不要用 BO 的 regret 或 best-so-far 证明主动学习的全局模型已经准确。
+
+应用顺序建议为 `PS01 → H01 → L01`：先复现公开聚合物数据上的传统 GP/bandit，再理解真实 HITL 闭环，最后评估依赖外部 LLM API 的高级方法。
 
 ### 想研究 PINN
 

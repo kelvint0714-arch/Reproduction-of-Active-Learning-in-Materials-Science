@@ -45,6 +45,9 @@
 |---|---|---|---|---|
 | P06 | MolPAL | 分子 BO / top-k 筛选 | 已收录 | 需要分子池工程时再使用 publication tag |
 | P08 | CAMD | 闭环平台 | 已收录 | 仅做架构与旧依赖评估 |
+| PS01 | 聚合物太阳能电池 | NLP 数据＋目标导向 AL/BO/bandit | 已收录 | 基础 AL/BO 后固定作者 commit，先比较 Random/Greedy/GP-EI |
+| H01 | 锂盐连续结晶 HITL | AL＋多目标优化＋真实闭环 | 已收录 | 固定 Zenodo v1，从带输出 notebook 做静态回放 |
+| L01 | LLM-AL | LLM 驱动的离散池目标优化 | 已收录 | 先回放作者轨迹，不调用商业 API |
 | S01 | 固化过程 PINN | 物理支持 | 已收录 | 确认官方代码；先读方程和 loss |
 | S02 | PiNDiff-CVI | 物理支持 | 已收录 | 运行作者合成数据流程 |
 | S03 | DES ML | 普通监督学习 | 已收录 | 保留为材料 ML/候选生成参考，不计入 AL |

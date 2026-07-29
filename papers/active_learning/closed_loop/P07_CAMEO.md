@@ -5,7 +5,7 @@
 - 论文：[On-the-fly closed-loop materials discovery via Bayesian active learning](https://doi.org/10.1038/s41467-020-19597-w)
 - 期刊：Nature Communications 11, 5966 (2020)
 - 作者代码与数据：[KusneNIST/CAMEO_NComm](https://github.com/KusneNIST/CAMEO_NComm)
-- 数据归档：[Zenodo 10.5281/zenodo.3998287](https://doi.org/10.5281/zenodo.3998287)
+- 数据归档：论文引用的 [Zenodo 10.5281/zenodo.3998287](https://doi.org/10.5281/zenodo.3998287)；固定版本为 [10.5281/zenodo.3998288](https://doi.org/10.5281/zenodo.3998288)
 - 本仓库状态：`未开始`
 
 ## 这篇论文做了什么
@@ -22,7 +22,7 @@ CAMEO 将预测、选点、测量和更新放进同一个闭环：系统一边�
   → 回填结果并重新学习
 ```
 
-它不是通用表格回归教程，也不是 GNN 或 PINN 模型。
+相图阶段通过图上的贝叶斯推断、标签传播和风险最小化降低整个相图的相区误分类；性质阶段再在相区内建立 GP，并综合预测均值、不确定性和相边界信息选择目标区域。它不是“一个 GP＋UCB”就能概括的通用表格回归教程，也不是 GNN 或 PINN 模型。
 
 ## 算法在闭环中的位置
 
@@ -43,6 +43,7 @@ CAMEO 将预测、选点、测量和更新放进同一个闭环：系统一边�
 
 - 代码以 MATLAB/MEX 为主，没有现代 Python 环境；
 - 仓库可支持离线回放，但不能复现同步辐射装置本身；
+- 真实 GST 闭环约为每轮 20–25 分钟，公开代码不能支撑笼统的“全流程秒级”表述；
 - 真实闭环还依赖仪器通信、排队、异常处理和实验安全控制。
 
 因此，离线算法复现难度为**高**，真实实验闭环难度为**极高**。
