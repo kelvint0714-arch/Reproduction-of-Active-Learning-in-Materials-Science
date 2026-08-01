@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-07-31",
+  "meaning": "recipe_status describes whether an executable path is documented; execution_status describes whether this repository has actually run it.",
+  "entries": [
+    {
+      "id": "A01",
+      "title": "NIST structure-property active learning",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A01_NIST_Structure_Property_AL_2024.md",
+      "recipe": "reproduction/recipes/A01/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A02",
+      "title": "Density-Aware Greedy Sampling",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A02_DAGS_Density_Aware_AL_2025.md",
+      "recipe": "reproduction/recipes/A02/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A03",
+      "title": "Benchmark-AL-Mat",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A03_Benchmark_AL_Mat_2025.md",
+      "recipe": "reproduction/recipes/A03/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A04",
+      "title": "Uncertainty-based active learning for black-box approximation",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A04_Koizumi_BlackBox_Approximation_2024.md",
+      "recipe": "reproduction/recipes/A04/README.md",
+      "recipe_status": "reimplementation-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A05",
+      "title": "Entropy-based GNN surrogate active learning",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A05_Entropy_GNN_Surrogate_2021.md",
+      "recipe": "reproduction/recipes/A05/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A06",
+      "title": "Regression-tree active learning for MOFs",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A06_MOF_RT_AL_2024.md",
+      "recipe": "reproduction/recipes/A06/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A07",
+      "title": "UQALE molecular generalization",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A07_UQALE_Molecular_Generalization_2023.md",
+      "recipe": "reproduction/recipes/A07/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A08",
+      "title": "AIPHAD phase-diagram active learning",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A08_AIPHAD_Phase_Diagram_2024.md",
+      "recipe": "reproduction/recipes/A08/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W01",
+      "title": "Classification-suite data efficiency",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W01/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W02",
+      "title": "Materials dataset redundancy and QBC",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W02/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W03",
+      "title": "MOF partial-charge GNN with MC dropout",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W03/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P04",
+      "title": "Partially Bayesian neural networks",
+      "track": "active_learning_advanced",
+      "card": "papers/active_learning/core/P04_PBNN_NeuroBayes.md",
+      "recipe": "reproduction/recipes/P04/README.md",
+      "recipe_status": "recipe-ready",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P05",
+      "title": "Deep-kernel learning on STM",
+      "track": "active_learning_closed_loop",
+      "card": "papers/active_learning/closed_loop/P05_DKL_on_STM.md",
+      "recipe": "reproduction/recipes/P05/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P07",
+      "title": "CAMEO closed-loop materials discovery",
+      "track": "active_learning_closed_loop",
+      "card": "papers/active_learning/closed_loop/P07_CAMEO.md",
+      "recipe": "reproduction/recipes/P07/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P09",
+      "title": "DP-GEN concurrent learning",
+      "track": "active_learning_concurrent",
+      "card": "papers/active_learning/concurrent_learning/P09_DPGEN.md",
+      "recipe": "reproduction/recipes/P09/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W04",
+      "title": "ALEBREW uncertainty-biased molecular dynamics",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W04/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W05",
+      "title": "FLARE on-the-fly Bayesian force fields",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W05/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W06",
+      "title": "SARA hierarchical active learning",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W06/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "W07",
+      "title": "FALCON active learning for machine-learning potentials",
+      "track": "active_learning_watch",
+      "card": "papers/LITERATURE_WATCH.md",
+      "recipe": "reproduction/recipes/W07/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P01",
+      "title": "PV-Lab Bayesian optimization benchmark",
+      "track": "bayesian_optimization",
+      "card": "papers/bayesian_optimization/benchmarks/P01_PVLab_Benchmarking.md",
+      "recipe": "reproduction/recipes/P01/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P02",
+      "title": "NIST Fe-Co-Ni Bayesian optimization benchmark",
+      "track": "bayesian_optimization",
+      "card": "papers/bayesian_optimization/benchmarks/P02_NIST_FeCoNi_Benchmark.md",
+      "recipe": "reproduction/recipes/P02/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P03",
+      "title": "Bgolearn",
+      "track": "bayesian_optimization",
+      "card": "papers/bayesian_optimization/frameworks/P03_Bgolearn.md",
+      "recipe": "reproduction/recipes/P03/README.md",
+      "recipe_status": "recipe-ready",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P10",
+      "title": "Augmented Gaussian process",
+      "track": "bayesian_optimization",
+      "card": "papers/bayesian_optimization/physics_informed/P10_Augmented_GP.md",
+      "recipe": "reproduction/recipes/P10/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P06",
+      "title": "MolPAL",
+      "track": "goal_directed",
+      "card": "papers/related/molecular_bo/P06_MolPAL.md",
+      "recipe": "reproduction/recipes/P06/README.md",
+      "recipe_status": "recipe-ready",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "P08",
+      "title": "CAMD autonomous platform",
+      "track": "platform",
+      "card": "papers/related/closed_loop_platforms/P08_CAMD.md",
+      "recipe": "reproduction/recipes/P08/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "AD01",
+      "title": "Epoxy adhesive small-data AL and BO",
+      "track": "adhesive_application",
+      "card": "papers/related/adhesive_hybrid/AD01_Epoxy_Adhesive_2019.md",
+      "recipe": "reproduction/recipes/AD01/README.md",
+      "recipe_status": "reimplementation-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "PS01",
+      "title": "Polymer solar cells sequential discovery",
+      "track": "goal_directed",
+      "card": "papers/related/goal_directed_al_bo/PS01_Polymer_Solar_Cells_2024.md",
+      "recipe": "reproduction/recipes/PS01/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "H01",
+      "title": "Human-AI lithium crystallization optimization",
+      "track": "human_in_the_loop",
+      "card": "papers/related/goal_directed_al_bo/H01_Lithium_Crystallization_HITL_2025.md",
+      "recipe": "reproduction/recipes/H01/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "L01",
+      "title": "LLM-driven materials active learning",
+      "track": "goal_directed",
+      "card": "papers/related/goal_directed_al_bo/L01_LLM_AL_2026.md",
+      "recipe": "reproduction/recipes/L01/README.md",
+      "recipe_status": "offline-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "S01",
+      "title": "Thermochemical curing PINN",
+      "track": "supporting_physics",
+      "card": "papers/supporting/physics_modeling/S01_Thermochemical_Curing_PINN.md",
+      "recipe": "reproduction/recipes/S01/README.md",
+      "recipe_status": "reimplementation-only",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "S02",
+      "title": "PiNDiff-CVI",
+      "track": "supporting_physics",
+      "card": "papers/supporting/physics_modeling/S02_PiNDiff_CVI.md",
+      "recipe": "reproduction/recipes/S02/README.md",
+      "recipe_status": "recipe-ready",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "S03",
+      "title": "Deep eutectic solvent machine learning",
+      "track": "supporting_ml",
+      "card": "papers/supporting/general_ml/S03_DES_ML.md",
+      "recipe": "reproduction/recipes/S03/README.md",
+      "recipe_status": "recipe-ready",
+      "execution_status": "not_started"
+    }
+  ]
+}

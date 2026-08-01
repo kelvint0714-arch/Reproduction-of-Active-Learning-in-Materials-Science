@@ -4,6 +4,10 @@
 
 本轮不连接真实粘合剂实验，不同时安装十篇论文环境，也不声称“克隆代码”就是复现完成。
 
+> 仓库中的全部论文都已有独立操作路径，见
+> [全部复现路径索引](recipes/README.md)。这里仍只把 A01 作为当前执行项，
+> 是为了避免同时安装和运行 32 套环境；“路径已写”与“结果已复现”必须分开。
+
 ## 1. 先读论文卡和边界说明
 
 依次阅读：
@@ -166,3 +170,20 @@ reproduction/runs/A01/
 3. 找到二维弹性数据、最小运行入口和环境说明。
 
 完成这三件后，再开始安装环境和运行。第二篇是 A02 DAGS，不回到 P01。
+
+## 怎样启动其他论文
+
+1. 从 [recipes 索引](recipes/README.md) 选择 ID；
+2. 阅读对应 `reproduction/recipes/<ID>/README.md` 的资源门槛和停止条件；
+3. 用 `python reproduction/tools/init_run.py <ID>` 建立证据目录；
+4. 在本仓库外克隆上游来源，并把实际 commit 写入
+   `reproduction/runs/<ID>/source_lock.md`；
+5. 先完成 T0/T1，不跳过 smoke test 直接运行完整论文预算；
+6. 只有日志、环境、原始结果和论文对照齐全后，才更新
+   [STATUS](STATUS.md) 的实际执行状态。
+
+所有 recipe 的结构检查：
+
+```bash
+python reproduction/tools/validate_recipes.py
+```
