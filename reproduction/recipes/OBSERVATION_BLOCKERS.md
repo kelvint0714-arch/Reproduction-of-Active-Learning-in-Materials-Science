@@ -1,8 +1,8 @@
 # 2026 观察论文：为什么暂不进入复现清单
 
-更新日期：2026-07-31。
+更新日期：2026-08-03。
 
-本页覆盖 `papers/LITERATURE_WATCH.md` 中尚未获得正式 ID 的四篇观察论文。它们没有
+本页覆盖 `papers/LITERATURE_WATCH.md` 中尚未获得正式 ID 的七篇观察论文。它们没有
 被漏掉；当前证据不足以写成可执行 recipe。先写清阻塞，胜过编造代码入口、数据或
 运行结果。
 
@@ -12,6 +12,9 @@
 | OBS-DISCOVERY | [Discovery Learning predicts battery cycle life from minimal experiments](https://doi.org/10.1038/s41586-025-09951-7) | 物理引导、小样本与实验设计混合 | 正式代码、可公开工业数据范围、AL 循环和消融、可运行的离线 Oracle |
 | OBS-RAFFLE | [RAFFLE: active learning accelerated interface structure prediction](https://doi.org/10.1038/s41524-025-01749-5) | 结构搜索＋主动扩充能量标签 | 官方代码入口、版本/许可证、标签计算后端、全局模型学习与低能结构优化的边界 |
 | OBS-QUANTUM | [Quantum-Inspired Active Learning for Accelerated Materials Discovery](https://doi.org/10.1109/NQComp68334.2026.11497667) | 合成数据上的 quantum-inspired 查询策略 | 论文—仓库版本映射、真实材料数据对应、引用核验、凭据清理与可审计基线 |
+| OBS-SCALE | [Accelerating sustainable glass discovery: integrating molecular dynamics, machine learning, and robotic synthesis](https://doi.org/10.1038/s41524-026-02249-w) | 实验密度全局校准 AL＋机器人合成 | Zenodo 产物的明确许可证、每轮样本/模型对应、无需机器人即可运行的离线入口 |
+| OBS-CEH | [Stoichiometry dependent properties of cerium hydride: An active learning developed interatomic potential study](https://doi.org/10.1103/7mny-v7vt) | HIPNN committee 分歧驱动的势能面 AL | 论文专用代码、18,068 个结构数据、模型权重、许可证与阈值回放入口 |
+| OBS-STEEL | [Bayesian active learning with monte carlo dropout and pseudo-labelling for steel defect classification](https://doi.org/10.1007/s11042-026-21825-2) | 钢缺陷类别边界 AL＋伪标签审核 | 作者代码许可证、NEU 数据许可证、论文—commit 映射与无人工界面的固定预算入口 |
 
 ## 准入操作
 

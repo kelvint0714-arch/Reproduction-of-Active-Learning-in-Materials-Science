@@ -24,6 +24,7 @@
 | A06 | [MOF RT-AL](active_learning/literature/A06_MOF_RT_AL_2024.md) | 用代表性小训练集预测 MOF 性质 | 代码和 4.1 GB 数据公开 | 只选一个目标和描述符 |
 | A07 | [UQALE 分子 OOD 泛化](active_learning/literature/A07_UQALE_Molecular_Generalization_2023.md) | 用不确定性补足训练域 | 代码和数据入口公开 | 先做一个性质、一次批量选样 |
 | A08 | [AIPHAD 相图 AL](active_learning/literature/A08_AIPHAD_Phase_Diagram_2024.md) | 学习相区和相边界 | Python 包、代码和补充数据公开 | 相图路线首选 |
+| A09 | [ANI-1x / QBC 化学空间 AL](active_learning/literature/A09_ANI_QBC_Chemical_Space_2018.md) | 分子势能面覆盖与能量/力全局精度 | COMP6、ANI-1x 与现代实现公开；完整历史 AL 链未核验 | 先做 COMP6 小子集评估，再重实现 Random/QBC |
 
 持续检索结果、2026 观察论文和准入规则见 [LITERATURE_WATCH](LITERATURE_WATCH.md)。
 
@@ -82,6 +83,7 @@
 A05：GNN embedding + GP
 → P04：部分贝叶斯神经网络
 → W03：MOF partial-charge GNN + MC Dropout
+→ A09：ANI committee disagreement + COMP6
 → P09：多神经网络分歧 + MD/DFT
 ```
 

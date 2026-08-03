@@ -82,8 +82,8 @@ def main() -> int:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     entries = manifest.get("entries", [])
 
-    if len(entries) != 32:
-        fail(errors, f"manifest should contain 32 recipes, found {len(entries)}")
+    if len(entries) != 33:
+        fail(errors, f"manifest should contain 33 recipes, found {len(entries)}")
 
     ids = [entry.get("id") for entry in entries]
     duplicate_ids = sorted(

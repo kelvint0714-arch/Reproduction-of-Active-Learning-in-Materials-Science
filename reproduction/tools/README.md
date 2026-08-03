@@ -2,7 +2,7 @@
 
 这些工具管理复现证据，不会代替论文代码，也不会自动把条目标为“完成”。
 
-## 检查 32 个 recipe
+## 检查 33 个 recipe
 
 ```bash
 python reproduction/tools/validate_recipes.py

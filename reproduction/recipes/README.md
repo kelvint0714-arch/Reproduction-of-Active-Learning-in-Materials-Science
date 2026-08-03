@@ -15,7 +15,7 @@
 A01 → A02 → W01 → W02 → A03 → A04
 
 结构表示与小样本不确定性
-A05 → A06 → A07 → W03 → P04
+A05 → A06 → A07 → W03 → P04 → A09
 
 相图、闭环与势函数
 A08 → P05 → P07 → W04 → W05 → W06 → W07 → P09
@@ -41,6 +41,7 @@ S03 → S01 → S02
 | A06 | [MOF RT-AL](A06/README.md) | 大数据；先单目标 |
 | A07 | [UQALE](A07/README.md) | 分子 OOD 泛化 |
 | A08 | [AIPHAD](A08/README.md) | 相图离线回放 |
+| A09 | [ANI-1x / QBC](A09/README.md) | COMP6 小子集评估；完整历史 AL 链待锁定 |
 | W01 | [Classification suite](W01/README.md) | 分类 AL |
 | W02 | [Materials redundancy/QBC](W02/README.md) | RF/XGBoost/QBC |
 | W03 | [MOF GNN + MC dropout](W03/README.md) | 旧 JAX/GNN 环境 |
@@ -84,7 +85,8 @@ S03 → S01 → S02
 ## 暂不建立 recipe 的观察论文
 
 `LITERATURE_WATCH` 中 2026 观察区的分子 Pareto front、Discovery Learning、
-RAFFLE 和 Quantum-Inspired AL 尚未全部通过代码、数据、许可证与任务边界核验。
+RAFFLE、Quantum-Inspired AL、可持续玻璃、铈氢化物势函数和钢缺陷分类尚未全部
+通过代码、数据、许可证与任务边界核验。
 它们保留在观察区，不使用“可复现”措辞。完成准入核验并获得稳定 ID 后，才可
 加入本索引和 `manifest.json`。逐篇缺口和准入步骤见
 [观察论文阻塞清单](OBSERVATION_BLOCKERS.md)。
