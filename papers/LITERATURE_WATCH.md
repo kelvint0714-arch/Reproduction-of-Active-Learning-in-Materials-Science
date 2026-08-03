@@ -1,6 +1,6 @@
 # 材料主动学习文献持续检索
 
-最后人工核验：**2026-07-29**
+最后人工核验：**2026-08-03**
 
 本文件是动态文献入口，不代表所有条目都已复现。论文只有同时通过“任务判定”和“来源核验”后，才进入正式论文卡。
 
@@ -36,6 +36,7 @@
 | A04 | 2024 | [Performance of uncertainty-based active learning for efficient approximation of black-box functions in materials science](https://doi.org/10.1038/s41598-024-76800-4) | 比较不确定性选样何时能改善全局函数逼近 | 论文使用多类公开材料数据；未核验到论文专用代码 | 先重实现论文最小基线；重要的负结果/边界论文 |
 | A07 | 2023 | [Evaluating uncertainty-based active learning for accelerating the generalization of molecular property prediction](https://doi.org/10.1186/s13321-023-00753-5) | 改善分子性质模型的域外泛化 | [代码](https://github.com/pnnl/UQALE) | 比较 UQ 策略与 Random，重点检验改进是否稳定 |
 | A08 | 2024 | [AIPHAD, an active learning web application for visual understanding of phase diagrams](https://doi.org/10.1038/s43246-024-00580-7) | 用不确定性采样学习完整相区和相边界 | [代码](https://github.com/NIMS-DA/aiphad)、[文档](https://nims-da.github.io/aiphad/docs/en/index.html) | 可安装应用并回放补充数据；相图路线第一优先 |
+| A09 | 2018 | [Less is more: Sampling chemical space with active learning](https://doi.org/10.1063/1.5023802) | 用 QBC 分歧扩充分子势能面覆盖，降低独立基准的能量/力误差 | [COMP6](https://github.com/isayev/COMP6)、[ANI-1x 数据](https://doi.org/10.6084/m9.figshare.10047041.v1)、[TorchANI](https://github.com/aiqm/torchani) | 先做 COMP6 小子集预训练模型评估；完整 AL 生成链仍需来源锁定 |
 | W04 | 2024 | [Uncertainty-biased molecular dynamics for learning uniformly accurate interatomic potentials](https://doi.org/10.1038/s41524-024-01254-1) | 选择新原子构型，训练更均匀准确的势函数 | [代码](https://github.com/nec-research/alebrew)、[数据](https://doi.org/10.5281/zenodo.10776838) | Mac/CPU 只跑 alanine-dipeptide 小例子；中高难度 |
 | W05 | 2020 | [On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events](https://doi.org/10.1038/s41524-020-0283-z) | 超过不确定性阈值时才调用 DFT，扩充通用力场 | [FLARE](https://github.com/mir-group/flare)、[归档数据](https://doi.org/10.24435/materialscloud:2020.0017/v1) | 离线回放较可行；重新运行全部 DFT 难 |
 | W06 | 2021 | [Autonomous materials synthesis via hierarchical active learning of nonequilibrium phase diagrams](https://doi.org/10.1126/sciadv.abg4930) | 内外两层 AL 学习非平衡相图 | [代码](https://github.com/gomes-lab/SARA_ScienceAdvances)、[原始数据](https://doi.org/10.7298/h63q-9r54) | 复现论文图可行；真实机器人闭环不可作为入门任务 |
@@ -67,6 +68,17 @@
 | [Discovery Learning predicts battery cycle life from minimal experiments](https://doi.org/10.1038/s41586-025-09951-7) | AL＋物理引导＋零样本学习，目标是少量原型下预测新电池寿命 | 论文代码、工业数据开放范围、AL 消融 |
 | [RAFFLE: active learning accelerated interface structure prediction](https://doi.org/10.1038/s41524-025-01749-5) | 主动扩充界面结构/能量数据，可能进入结构搜索与势函数旁支 | 官方代码入口、标签 Oracle、全局学习与低能结构优化的边界 |
 | [Quantum-Inspired Active Learning for Accelerated Materials Discovery](https://doi.org/10.1109/NQComp68334.2026.11497667) | 正式 IEEE 会议论文；经典计算机上的 quantum-inspired 不确定性采样，不是量子硬件加速 | [仓库](https://github.com/arnavk23/Quantum-active-learning) 以合成/随机材料数据为主，数据对应、引用准确性和凭据卫生存在风险；仅观察，不作为基准 |
+| [Accelerating sustainable glass discovery: integrating molecular dynamics, machine learning, and robotic synthesis](https://doi.org/10.1038/s41524-026-02249-w) | 实验密度标签上的全局校准 AL；先按 GPR 不确定性查询，后按模拟—实验偏差与组成距离补点 | [Zenodo](https://doi.org/10.5281/zenodo.18430657) 含数据、模型和迭代学习压缩包，但未声明许可证；整体约 930 MB，先观察 |
+| [Stoichiometry dependent properties of cerium hydride: An active learning developed interatomic potential study](https://doi.org/10.1103/7mny-v7vt) | HIPNN 委员会按能量/力分歧查询 DFT 标签，目标是覆盖 Ce/CeH\(_x\) 势能面；属于 AL-core | 未核验到论文专用代码、训练数据归档及其许可证；不能建立可执行 recipe |
+| [Bayesian active learning with monte carlo dropout and pseudo-labelling for steel defect classification](https://doi.org/10.1007/s11042-026-21825-2) | MC Dropout 不确定性学习钢表面缺陷类别边界；熵/BALD 与伪标签人在回路混合 | [作者代码](https://github.com/ashys2012/Bayesian_Active_learning_With_Pseudo_labelling_HITL) 未声明许可证；NEU 数据许可未核验，先观察 |
+
+### 2026-07-20 至 2026-08-03 候选逐项核验
+
+| 论文 | 任务目标与输入/标签 | 代理模型、不确定性与查询 | 评价 | 代码、数据、许可证 | 准入决定与最小复现 |
+|---|---|---|---|---|---|
+| Sustainable glass discovery | 学习玻璃组成到实验密度的全局校准；输入为组成，标签为实验密度 | GPR/贝叶斯岭回归；第一轮用 GPR 方差，后续用模拟—实验偏差并要求至少 20 mol% 组成距离 | \(R^2\)、MAE，并核对闭环后校准 | Zenodo 有数据、模型和 `iterative_learning.zip`；许可证**未核验** | 任务通过，资源许可未通过；最小任务是固定公开表格回放每轮密度误差与查询顺序 |
+| Cerium hydride potential | 学习 Ce/CeH\(_x\) 构型的势能面；输入为原子构型，标签为 DFT 能量与力 | 8 个 HIPNN 委员会；力标准差 >0.2 eV/Å 或能量分歧 >0.5 eV 时查询 | 最终 18,068 个结构；论文报告力 MAE 0.18 eV/Å、能量 MAE 0.0055 eV | 论文/预印本可核验；专用代码、数据、许可证**未核验** | AL-core，但证据不足；最小任务需先获得固定数据与模型入口，再回放分歧阈值 |
+| Steel defect classification | 学习 6 类钢表面缺陷边界；输入为 200×200 图像，标签为缺陷类别 | ResNet-18；15 次 MC Dropout；entropy/BALD/random，交替不确定样本标注与高置信伪标签审核 | accuracy、F1、混淆矩阵；论文报告 23% 标注时 99.73% accuracy | 作者 GitHub 无许可证；NEU 1,800 图像的公开入口可核验，数据许可证**未核验**；论文 CC BY 4.0 | 分类 AL 目标通过，许可阻塞；最小任务是按相同预算比较 Random/Entropy/BALD，人与审核为模拟流程 |
 
 ## 明确分到 BO 或其他类别
 
@@ -79,6 +91,10 @@
 | Active learning for accelerated design of layered materials | 正文用 Expected Improvement 寻找目标性质，归入 BO |
 | CAMD | 是自主 Agent/Experiment/Analyzer/Campaign 平台，不限定 AL 算法 |
 | PINN / PiNDiff / DES ML | 是物理建模或普通监督学习，没有主动补标签闭环 |
+| Composition-aware optimization of interatomic potentials for glasses | [论文](https://doi.org/10.1016/j.commatsci.2026.114865) 和[官方代码](https://github.com/ruoxia-c/Borosilicate-Glass-Potential)使用 Bayesian Optimization/CMA-ES 寻找两组最优势参数；不是全局模型学习 AL。仓库未声明许可证，完整数据按请求提供。 |
+| Active learning-assisted optimization of gas diffusion layers | [论文](https://doi.org/10.1007/s11705-026-2693-z)以电解槽性能最佳参数组合为目标；属于目标优化/BO 语境，代码、数据和许可证未核验。 |
+| Physics-Constrained Active Learning Diffusion Framework for MIM metasurfaces | [论文](https://doi.org/10.1364/OE.605206)主体是高 FoM 逆设计与生成式扩散模型；不能仅凭标题列入 AL-core，专用代码/数据未核验。 |
+| Autothermalclaw_db | [新公开仓库](https://github.com/ayumu1969/Autothermalclaw_db)混合 GNN ensemble、mock VASP 与自动化平台，但没有可核验论文/DOI，也无 LICENSE 文件；不准入。 |
 
 ## 复现优先级
 
@@ -93,7 +109,7 @@ W02 data redundancy/QBC → A03 AutoML benchmark → A04 negative-result benchma
 A05 GP-Net → W03 MOF partial-charge GNN → P04 PBNN
 
 第四组：相图、势函数和真实闭环
-A08 AIPHAD → W04 ALEBREW / P09 DP-GEN → W05 FLARE → W06 SARA
+A08 AIPHAD → A09 ANI-1x QBC → W04 ALEBREW / P09 DP-GEN → W05 FLARE → W06 SARA
 
 应用迁移
 通用 AL 基准 → PS01 聚合物组合筛选 → 环氧粘合剂 AL 阶段 → 独立 BO 阶段
@@ -112,5 +128,7 @@ A08 AIPHAD → W04 ALEBREW / P09 DP-GEN → W05 FLARE → W06 SARA
 
 | 日期 | 变化 |
 |---|---|
+| 2026-08-03 | 检索 2026-07-20 至 2026-08-03 的出版社/DOI、作者仓库和官方归档；三篇新 AL 论文因许可证或论文专用代码/数据不足进入观察区，四项优化、生成或未关联论文项目明确不准入。 |
+| 2026-08-03 | 由新铈氢化物论文回溯并补入基础工作 A09（ANI-1x/QBC）；核验 COMP6、Figshare ANI-1x、旧 ASE_ANI 和现代 TorchANI 的来源与许可，同时保留完整 AL 数据生成链“未核验”。 |
 | 2026-07-29 | 核验用户补充清单：正式收录 PS01、H01、L01 三个目标导向/混合案例；量子项目因数据与引用风险只进观察区；补充查询策略数学说明。 |
 | 2026-07-29 | 首次严格区分 AL 与 BO；核验 15 篇模型学习型 AL、1 篇环氧 AL+BO 案例和 4 篇 2026 观察论文；将 PV-Lab 从 AL 主线移出。 |

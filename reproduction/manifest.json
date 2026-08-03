@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-07-31",
+  "updated_on": "2026-08-03",
   "meaning": "recipe_status describes whether an executable path is documented; execution_status describes whether this repository has actually run it.",
   "entries": [
     {
@@ -72,6 +72,15 @@
       "track": "active_learning",
       "card": "papers/active_learning/literature/A08_AIPHAD_Phase_Diagram_2024.md",
       "recipe": "reproduction/recipes/A08/README.md",
+      "recipe_status": "source-lock-needed",
+      "execution_status": "not_started"
+    },
+    {
+      "id": "A09",
+      "title": "ANI-1x query-by-committee chemical-space active learning",
+      "track": "active_learning",
+      "card": "papers/active_learning/literature/A09_ANI_QBC_Chemical_Space_2018.md",
+      "recipe": "reproduction/recipes/A09/README.md",
       "recipe_status": "source-lock-needed",
       "execution_status": "not_started"
     },
